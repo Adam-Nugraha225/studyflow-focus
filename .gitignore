@@ -1,0 +1,17 @@
+# Dependencies
+**/node_modules/
+**/package-lock.json
+
+# Next.js & Build
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Backend Persistence & Secrets
+backend/tasks.json
+backend/.env
+frontend/.env*
+
+# System Files
+desktop.ini
+.DS_Store

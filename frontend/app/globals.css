@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050816;
+  --foreground: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(139, 92, 246, 0.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(34, 211, 238, 0.14),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(239, 68, 68, 0.12),
+      transparent 25%
+    ),
+    #050816;
+
+  color: var(--foreground);
+
+  font-family: var(--font-jakarta);
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+/* GLASS */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3);
+
+  transition: all 0.35s ease;
+}
+
+/* GLASS HOVER */
+.glass:hover {
+  border-color: rgba(103, 232, 249, 0.2);
+
+  box-shadow:
+    0 12px 40px rgba(103, 232, 249, 0.08);
+
+  transform: translateY(-3px);
+}
+
+/* GRADIENT TEXT */
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    #67e8f9,
+    #c084fc
+  );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+/* BUTTON */
+.gradient-button {
+  background: linear-gradient(
+    to right,
+    #67e8f9,
+    #c084fc,
+    #fca5a5
+  );
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 10px 30px rgba(103, 232, 249, 0.18);
+
+  color: #07111f;
+}
+
+/* BUTTON HOVER */
+.gradient-button:hover {
+  transform: translateY(-2px) scale(1.02);
+
+  box-shadow:
+    0 14px 40px rgba(192, 132, 252, 0.25);
+
+  opacity: 0.97;
+}
+
+/* INPUT */
+input,
+select {
+  outline: none;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
