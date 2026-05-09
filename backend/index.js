@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8080;
 // --- SECURITY: CORS WHITELISTING ---
 const allowedOrigins = [
   'http://localhost:3000', // URL Frontend saat running lokal
-  'https://studyflow-adam.vercel.app' // URL Vercel kamu
+  'https://studyflow-focus-zeta.vercel.app' // URL Vercel kamu
 ];
 
 const corsOptions = {
