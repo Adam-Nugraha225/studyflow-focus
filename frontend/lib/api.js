@@ -1,5 +1,5 @@
-// GANTI 5000 MENJADI 8080
-const API_BASE_URL = "https://dvlb2qxv-8080.asse.devtunnels.ms/api";
+// Gunakan link DevTunnels yang sudah Public dan terverifikasi
+const BASE_URL = "https://dvlb2qxv-8080.asse.devtunnels.ms/api/tasks";
 
 export const getTasks = async () => {
   try {
@@ -29,8 +29,10 @@ export const addTaskApi = async (task) => {
 
 export const toggleTaskApi = async (id) => {
   try {
+    // Memastikan URL menjadi .../api/tasks/id
     const res = await fetch(`${BASE_URL}/${id}`, { 
-      method: "PATCH" 
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" }
     });
     if (!res.ok) throw new Error("Gagal update status");
     return await res.json();
@@ -42,6 +44,7 @@ export const toggleTaskApi = async (id) => {
 
 export const deleteTaskApi = async (id) => {
   try {
+    // Memastikan URL menjadi .../api/tasks/id
     const res = await fetch(`${BASE_URL}/${id}`, { 
       method: "DELETE" 
     });
